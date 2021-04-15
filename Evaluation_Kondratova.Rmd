@@ -1,11 +1,21 @@
 ---
 title: "Examen final Modules 4 et 5"
-author: "Olivier Rué - Valentin Loux and Maria Kondratova"
+author: "Olivier Rué - Valentin Loux"
 subtitle: "DUBii 2021"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-
-output: html_document
-     
+bibliography: resources/biblio.bib 
+csl: resources/biomed-central.csl
+output:
+    html_document:
+      css: [css/style.css, 'https://use.fontawesome.com/releases/v5.0.9/css/all.css']
+      self_contained: true
+      number_sections: false
+      code_folding: "hide"
+      toc: true
+      toc_depth: 3
+      toc_float: true
+      includes:
+        after_body: resources/footer.html
 ---
 
 ```{r setup, include=FALSE}
@@ -127,7 +137,7 @@ La qualité des bases vous paraît-elle satisfaisante ? Pourquoi ?
 
 car <code> R2 </code> comme le montre <code> a plus de base dans la zone rouge que R1 </code>
 
-Lien vers le [rapport MulitQC](http://example.com/ "rapport MulitQC")
+Lien vers le [rapport MulitQC](https://github.com/mkondratova/EvaluationM4M5/blob/main/Evaluation.html "rapport MulitQC")
 
 Est-ce que les reads déposés ont subi une étape de nettoyage avant d'être déposés ? Pourquoi ?
 
@@ -233,7 +243,7 @@ grep -c 'NC_000964.3'  result_trmNF_bed.txt
 
 <code> 2797 </code> reads chevauchent le gène d'intérêt.
 
-MulitQC report
+MulitQC report 
 
 ```{bash}
 
