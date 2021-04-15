@@ -1,0 +1,5 @@
+Sample	fastp_mqc-generalstats-fastp-pct_duplication	fastp_mqc-generalstats-fastp-after_filtering_q30_rate	fastp_mqc-generalstats-fastp-after_filtering_q30_bases	fastp_mqc-generalstats-fastp-after_filtering_gc_content	fastp_mqc-generalstats-fastp-pct_surviving	fastp_mqc-generalstats-fastp-pct_adapter	Samtools_mqc-generalstats-samtools-flagstat_total	Samtools_mqc-generalstats-samtools-mapped_passed	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
+CLEANING | fastp	1.17555	0.909586	1807650723.0	0.435778	95.90992427882318	2.4222002234627382							
+MAPPING | SRR10390685_on_GCF_000009045.1_ASM904v1.sort							13571369	12826829					
+QC | SRR10390685_1									42.69879980756875	43.0	149.62690270596536	10.0	7066055.0
+QC | SRR10390685_2									39.908152255676576	43.0	150.41033759290013	10.0	7066055.0

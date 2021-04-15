@@ -1,0 +1,6 @@
+Module	Section	Sample Name	Source
+Samtools	flagstat	MAPPING | SRR10390685_on_GCF_000009045.1_ASM904v1.sort	/shared/ifbstor1/home/mkondratova/EvaluationM4M5/MAPPING/SRR10390685_on_GCF_000009045.1_ASM904v1.sort.bam.flagstat
+Samtools	idxstats	MAPPING | SRR10390685_on_GCF_000009045.1_ASM904v1.sort	/shared/ifbstor1/home/mkondratova/EvaluationM4M5/MAPPING/SRR10390685_on_GCF_000009045.1_ASM904v1.sort.bam.idxstats
+fastp	all_sections	CLEANING | fastp	/shared/ifbstor1/home/mkondratova/EvaluationM4M5/CLEANING/fastp.json
+FastQC	all_sections	QC | SRR10390685_2	/shared/ifbstor1/home/mkondratova/EvaluationM4M5/QC/SRR10390685_2_fastqc.zip
+FastQC	all_sections	QC | SRR10390685_1	/shared/ifbstor1/home/mkondratova/EvaluationM4M5/QC/SRR10390685_1_fastqc.zip
