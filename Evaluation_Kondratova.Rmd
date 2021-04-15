@@ -1,6 +1,6 @@
 ---
 title: "Examen final Modules 4 et 5"
-author: "Olivier Rué - Valentin Loux"
+author: "Olivier Rué - Valentin Loux and Maria Kondratova"
 subtitle: "DUBii 2021"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 bibliography: resources/biblio.bib 
@@ -152,7 +152,7 @@ Quelle est la profondeur de séquençage (calculée par rapport à la taille du 
 
 ```
 
-La profondeur de séquençage est de : <code> 2.119142 G (total bases before filtering fastp) / 4215606 (ref genome size) = 502.7 (rather good) </code> X.
+La profondeur de séquençage est de : <code> 2.119142 G (total bases before filtering fastp) / 4215606 (ref genome size) = 502.7 (rather good) </code> 
 
 ## Nettoyage des reads
 
@@ -170,7 +170,9 @@ Les paramètres suivants ont été choisis :
 
 |Parametre | Valeur | Explication |
 |----------|--------|-------------|
-|  |  |  |
+| mean quality | >= 30 | to avoid low quality reads| 
+|  sliding window | 8  |  sliding window  from 3’ extremity to 5’ extremity| 
+| length of the read |>= 100| to avoid short reads | 
 
 
 
@@ -226,6 +228,10 @@ Combien de reads ne sont pas mappés ?
 
 Calculez le nombre de reads qui chevauchent avec au moins 50% de leur longueur le gène _trmNF_ grâce à l'outil <strong class="tool">bedtools</strong> @bedtools:
 
+Pour faire cette tâche, j'ai extrait des informations sur trmNF du fichier gff, puis fait manuellement
+trmNF.lit le fichier. Les fichiers gff et bed utilisent différents systèmes de coordonnées
+donc, les coordonnées de bed pour le gène = coordonnées gff - 1
+
 ```{bash}
 
 
@@ -237,13 +243,14 @@ module load bedtools
 bedtools bamtobed -i MAPPING/SRR10390685_on_GCF_000009045.1_ASM904v1.sort.bam  >  MAPPING/SRR10390685_on_GCF_000009045.1_ASM904v1.bed
 
 bedtools intersect -a MAPPING/SRR10390685_on_GCF_000009045.1_ASM904v1.bed -b trmNF.bed  -f 0.5   > result_trmNF_bed.txt
+
 grep -c 'NC_000964.3'  result_trmNF_bed.txt
 
 ```
 
 <code> 2797 </code> reads chevauchent le gène d'intérêt.
 
-MulitQC report 
+Generation of MulitQC report  
 
 ```{bash}
 
